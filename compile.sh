@@ -37,7 +37,7 @@ fi
 
 CP="lib/*${PATHSEP}classes${PATHSEP}javafx-sdk/lib/*"
 SP=src/java/
-APPLICATION="nxt-clone"
+APPLICATION="Meteor"
 
 /bin/rm -f ${APPLICATION}.jar
 /bin/rm -f ${APPLICATION}service.jar
