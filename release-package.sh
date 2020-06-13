@@ -5,17 +5,17 @@ then
 	echo VERSION not defined
 	exit 1
 fi
-PACKAGE=MTR-client-${VERSION}
+PACKAGE=nxt-client-${VERSION}
 echo PACKAGE="${PACKAGE}"
-CHANGELOG=MTR-client-${VERSION}.changelog.txt
+CHANGELOG=nxt-client-${VERSION}.changelog.txt
 OBFUSCATE=$2
 
 FILES="changelogs conf html lib resource contrib"
-FILES="${FILES} Meteor.exe Meteorservice.exe"
+FILES="${FILES} nxt.exe nxtservice.exe"
 FILES="${FILES} 3RD-PARTY-LICENSES.txt AUTHORS.txt LICENSE.txt"
 FILES="${FILES} DEVELOPERS-GUIDE.md OPERATORS-GUIDE.md README.md README.txt USERS-GUIDE.md"
 FILES="${FILES} mint.bat mint.sh run.bat run.sh run-tor.sh run-desktop.sh start.sh stop.sh compact.sh compact.bat sign.sh"
-FILES="${FILES} nxt.policy nxtdesktop.policy Wallet.url Dockerfile"
+FILES="${FILES} nxt.policy nxtdesktop.policy NXT_Wallet.url Dockerfile"
 
 unix2dos *.bat
 echo compile
@@ -45,8 +45,8 @@ echo javadoc
 ./javadoc.sh
 fi
 echo copy resources
-cp installer/lib/JavaExe.exe Meteor.exe
-cp installer/lib/JavaExe.exe Meteorservice.exe
+cp installer/lib/JavaExe.exe nxt.exe
+cp installer/lib/JavaExe.exe nxtservice.exe
 cp -a ${FILES} nxt
 cp -a logs/placeholder.txt nxt/logs
 echo gzip
@@ -115,7 +115,7 @@ echo >> ${CHANGELOG}
 echo "https://bitbucket.org/JeanLucPicard/nxt/downloads/nxt-installer-${VERSION}.dmg" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 
-echo "The exe, dmg, and sh packages must have a digital signature by \"Stichting NXT\"." >> ${CHANGELOG}
+echo "The exe, dmg, and sh packages must have a digital signature by \"Meteor Team\"." >> ${CHANGELOG}
 
 if [ "${OBFUSCATE}" = "obfuscate" ];
 then
@@ -144,5 +144,3 @@ gpgv ${CHANGELOG}.asc
 sha256sum -c ${CHANGELOG}.asc
 #jarsigner -verify ${PACKAGE}.zip
 jarsigner -verify ${PACKAGE}.sh
-
-
