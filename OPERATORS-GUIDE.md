@@ -3,7 +3,7 @@
 
 ----
 ## How to verify the NRS? ##
-  Releases are signed by Jean-Luc using [GPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard). It is **highly** recommended to verify the signature every time you download new version. [There are some notes](https://bitcointalk.org/index.php?topic=345619.msg4406124#msg4406124) how to do this. [This script](https://github.com/nxt-ext/nxt-kit/blob/master/distrib/safe-nxt-download.sh) automates this process on Linux.
+  Releases are signed by Meteor Team using [GPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard). It is **highly** recommended to verify the signature every time you download new version. [There are some notes](https://bitcointalk.org/index.php?topic=345619.msg4406124#msg4406124) how to do this. [This script](https://github.com/nxt-ext/nxt-kit/blob/master/distrib/safe-nxt-download.sh) automates this process on Linux.
 
 ----
 ## How to configure the NRS? ##
