@@ -5,7 +5,7 @@ then
 	echo VERSION not defined
 	exit 1
 fi
-PACKAGE=nxt-client-${VERSION}
+PACKAGE=mtr-client-${VERSION}
 echo PACKAGE="${PACKAGE}"
 CHANGELOG=nxt-client-${VERSION}.changelog.txt
 OBFUSCATE=$2
